@@ -1,9 +1,9 @@
 package DarrenYau;
 
 public class Card {
-    private String rank;
-    private String suit;
-    private int pointValue;
+    String rank;
+    String suit;
+    int pointValue;
 
     public Card (String rank, String suit, int pointValue) {
         this.rank = rank;
@@ -24,6 +24,10 @@ public class Card {
     }
 
     public boolean equals(Card otherCard) {
-        
+        return this.pointValue == otherCard.pointValue;
+    }
+
+    public String toString(){
+        return "The card is the " + rank + " of " + suit + "with " + pointValue + " points!";
     }
 }
